@@ -1,0 +1,20 @@
+edition: 1.0.0
+name: my-framework-app
+access: default
+services:
+  framework:
+    component: fc
+    props:
+      region: cn-hangzhou
+      service:
+        name: serverless-devs-application
+      function:
+        name: sd-e090
+        description: Initialize
+        runtime: python3.10
+        handler: /sd/webui.py
+        memorySize: 16384
+        cpu: 8
+        timeout: 60
+        codeUri: ./
+        diskSize: 512
